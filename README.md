@@ -6,7 +6,7 @@
 Elections are essential for everyday people to influence the decisions that
 affect their lives. For elections to succeed, election boards, monitors, and
 other stakeholders need resources to support effective and inclusive practices.
-They also need to be identify and address election vulnerabilities.
+They also need to identify and address election vulnerabilities.
 
 Timing is important to both of these efforts. Although many of us are familiar
 with the campaigning and voting of elections, many critical stages in the
@@ -91,22 +91,22 @@ independent and happen in parallel. They also build one another. The earlier
 stages are informal and good for newcomers. The later stages are more formal
 and a good fit for volunteers who are familiar with the project.
 
-*Create issues.* Have an idea for a visualization or other improvement? You can
-document the idea so that you or a teammate can make it happen. Be sure to
+**Create issues.** Have an idea for a visualization or other improvement? You
+can document the idea so that you or a teammate can make it happen. Be sure to
 include a descriptive name. Also describe the desired feature as clearly and
 with as much detail as possible.
 
-*Explore.* Create a Jupyter Notebook or R Markdown document to explore some
+**Explore.** Create a Jupyter Notebook or R Markdown document to explore some
 aspect of the data, or to experiment with a new visualization. These documents
 can be quick and informal. The goal is to spark useful discussions.
 
-*Package good ideas.* Some exploratory work will produce code that others will
+**Package good ideas.** Some exploratory work will produce code that others will
 want to use. Think critically about the design, add the code to the codebase,
 and document new functionality. This work is more formal, using unit tests,
 documentation, coding conventions, and more centralized design to promote
 maintainability and easy widespread use.
 
-*Go to production.* Work on the public facing application.
+**Go to production.** Work on the public facing application.
 
 
 ## Contribute
@@ -120,8 +120,8 @@ valuable. To get started:
 3. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repository.
 4. Submit a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with your work.
 
-Be sure not to skip step one; on Slack you can meet the team, get on our meeting
-schedule, and determine how your interests fit our priorities.
+On Slack you can meet the team, get on our meeting schedule, and determine how
+your interests fit our priorities.
 
 
 ## Team
