@@ -1,7 +1,5 @@
 # IFES Elections Data Visualization
 
-- Contact Bailey Binman.
-
 
 ## Background
 
