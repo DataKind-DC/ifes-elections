@@ -1,7 +1,5 @@
 # IFES Elections Data Visualization
 
-- Connect with the group (Slack, etc).
-- How to contribute.
 - Contact Bailey Binman.
 
 
@@ -85,6 +83,21 @@ TODO
 
 ### Feedback and Wrap-up
 TODO
+
+
+## Contribute
+
+We welcome your help! Whether you like data wrangling, exploratory analysis,
+documentation, visual design, or package development, your ideas and effort are
+valuable. To get started:
+
+1. Connect with us on the #elections channel of the DKDC Slack.
+2. Check out our open [issues](https://github.com/DataKind-DC/ifes-elections/issues).
+3. [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) this repository.
+4. Submit a [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) with your work.
+
+Be sure not to skip step one; on Slack you can meet the team, get on our meeting
+schedule, and determine how your interests fit our priorities.
 
 
 ## Team
