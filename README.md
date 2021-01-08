@@ -1,5 +1,29 @@
 # IFES Elections Data Visualization
 
+- IFES works with stakeholders for elections.
+- Documentation.
+- Tables to visuals.
+- Source: Election Guide.
+- Objective: timelines.
+- Elections have commonly recognized phases.
+- Important phases are often overlooked.
+- Brainstorm motivating questions.
+- When are vulnerabilities? When can you help?
+- When are high levels of activity (peak need)?
+- Country specific timelines for transparency.
+- Archetype, comparative timelines, and outliers.
+- Times to create mischief (registration, procurement, lame duck).
+- Times to support free and fair elections.
+- Measure days until election or inauguration.
+- Audience: IFES staff, election boards, donors, academics.
+- Create interactive dashboards.
+- Start rough and iterate.
+- UN Circle.
+- Connect with the group (Slack, etc).
+- How to contribute.
+- Contact Bailey Binman.
+
+
 ## Background
 Insert a quick blurb about the project. This is possibly where we have a project summary or the objectives
 of the project.
