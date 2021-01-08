@@ -45,17 +45,10 @@ election officials, donors, academics, and the public at
 
 
 ## Table of Contents
-- [Team Members](#team-members)
+- [Team Members](#team)
 - [Deliverables](#deliverables)
 - [Data](#data)
 - [Project Phases](#phases)
-
-## Team Members
-- Name of Member
-  - Role (either DA, Core Volunteer, Stakeholder, etc.)
-  - Personal Email
-  - Contact Phone (?)
-  - Miscellaneous information such as contact for certain problems
 
 ## Deliverables
 Insert key questions that the project is supposed to answer. Ideally we should also include information about the skillset needed and/or if the task is beginner friendly
@@ -94,3 +87,12 @@ TODO
 
 ### Feedback and Wrap-up
 TODO
+
+
+## Team
+
+Our Data Ambassadors work with IFES staff and organize volunteer efforts.
+
+- Nathan Banion ([nbanion](https://github.com/nbanion))
+- Sanjay Ramchandani ([sramchandani](https://github.com/sramchandani))
+- Pooja Tyagi ()
