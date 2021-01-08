@@ -1,13 +1,6 @@
 # IFES Elections Data Visualization
 
 - Source: Election Guide.
-- Objective: timelines.
-- Brainstorm motivating questions.
-- Country specific timelines for transparency.
-- Archetype, comparative timelines, and outliers.
-- Measure days until election or inauguration.
-- Create interactive dashboards.
-- Start rough and iterate.
 - Connect with the group (Slack, etc).
 - How to contribute.
 - Contact Bailey Binman.
@@ -48,8 +41,29 @@ election officials, donors, academics, and the public at
 Stay tuned for project documentation.
 
 
-## Deliverables
-Insert key questions that the project is supposed to answer. Ideally we should also include information about the skillset needed and/or if the task is beginner friendly
+## Objective and Outcomes
+
+We aim to characterize the timing of electoral cycles around the world.
+
+Although each election is different, most elections have common phases like
+candidate registration, election day, and dispute resolution. We will use
+historical election data from IFES to identify when these phases start and end
+for individual countries and elections. We will also aggregate these timelines
+to characterize archetypal elections. Some specific questions:
+
+- How long are different election phases?
+- How long before election day or inauguration do they occur?
+- At what time of year do they occur?
+- How frequently do they occur over time?
+
+Our first deliverables will be rough, iterative visuals. These visuals will help
+us identify key insights about electoral cycles and experiment with effective
+presentation methods.
+
+The final deliverable will polish the initial visuals and present them through
+an interactive user interface, possibly hosted on
+[electionguide.org](https://www.electionguide.org/).
+
 
 ## Data
 A short introduction of the data set used. The main subections of this section should be focus on how to access the data as well as general onboarding.
