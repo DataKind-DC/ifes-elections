@@ -44,12 +44,6 @@ election officials, donors, academics, and the public at
 [electionguide.org](https://www.electionguide.org/).
 
 
-## Table of Contents
-- [Team Members](#team)
-- [Deliverables](#deliverables)
-- [Data](#data)
-- [Project Phases](#phases)
-
 ## Deliverables
 Insert key questions that the project is supposed to answer. Ideally we should also include information about the skillset needed and/or if the task is beginner friendly
 
