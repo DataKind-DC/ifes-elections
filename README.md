@@ -83,6 +83,31 @@ TODO
 TODO
 
 
+# Workflow
+
+There are several ways to contribute to this project. These areas of work are
+independent and happen in parallel. They also build one another. The earlier
+stages are informal and good for newcomers. The later stages are more formal
+and a good fit for volunteers who are familiar with the project.
+
+*Create issues.* Have an idea for a visualization or other improvement? You can
+document the idea so that you or a teammate can make it happen. Be sure to
+include a descriptive name. Also describe the desired feature as clearly and
+with as much detail as possible.
+
+*Explore.* Create a Jupyter Notebook or R Markdown document to explore some
+aspect of the data, or to experiment with a new visualization. These documents
+can be quick and informal. The goal is to spark useful discussions.
+
+*Package good ideas.* Some exploratory work will produce code that others will
+want to use. Think critically about the design, add the code to the codebase,
+and document new functionality. This work is more formal, using unit tests,
+documentation, coding conventions, and more centralized design to promote
+maintainability and easy widespread use.
+
+*Go to production.* Work on the public facing application.
+
+
 ## Contribute
 
 We welcome your help! Whether you like data wrangling, exploratory analysis,
