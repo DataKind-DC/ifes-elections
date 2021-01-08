@@ -1,6 +1,5 @@
 # IFES Elections Data Visualization
 
-- Documentation.
 - Source: Election Guide.
 - Objective: timelines.
 - Brainstorm motivating questions.
@@ -42,6 +41,11 @@ The result will provide insights about the timing of electoral cycles around the
 world, and it will use visuals to make those insights available to IFES staff,
 election officials, donors, academics, and the public at
 [electionguide.org](https://www.electionguide.org/).
+
+
+## Documentation
+
+Stay tuned for project documentation.
 
 
 ## Deliverables
