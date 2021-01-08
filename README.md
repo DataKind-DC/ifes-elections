@@ -68,13 +68,14 @@ specific sources and fields of interest.
 
 
 ## Phases
-Phases usually follow this lifecycle. It may vary from project to project but the general phases
-- [Research and Design](#research-and-design)
-- [Testing and Implementation](#testing-and-implementation)
-- [Feedback and Wrap-up](#feedback-and-wrap-up)
 
-### Research and Design
-TODO
+We will implement this project in several stages.
+
+### Research and Design (Active)
+
+- Identify key questions and outcomes.
+- Identify and inspect data sources.
+- Discuss and set up project infrastructure.
 
 ### Testing and Implementation
 TODO
