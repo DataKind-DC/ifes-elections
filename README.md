@@ -32,9 +32,37 @@ world. It will use visuals to make those insights available to IFES staff,
 election officials, donors, academics, and the public at
 [electionguide.org](https://www.electionguide.org/).
 
+
+## Get started
+
+See the following resources to learn about the project:
+
 - **GitHub:** https://github.com/DataKind-DC/ifes-elections
 - **Documentation:** Stay tuned.
 - **Application:** Stay tuned.
+
+To install, first clone the repository:
+
+```
+git clone https://github.com/DataKind-DC/ifes-elections
+```
+
+Second, install the project Python package, possibly in a virtual env.
+
+```
+python3 -m venv env/ifes/
+sourced env/ifes/bin/activate
+pip install -e .
+```
+
+Third, put a ``.env`` file in the root directory. This file contains credentials
+for activating the Election Guide API. Ask a data ambassador for access.
+
+Finally, download the raw data to `data/raw/` using `make`:
+
+```
+make raw
+```
 
 
 ## Objective and Outcomes
