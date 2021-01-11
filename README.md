@@ -13,10 +13,9 @@ with the campaigning and voting of elections, many critical stages in the
 electoral cycle occur long before or after election day. Stakeholders need to
 know when these stages occur, so that they can support elections at each stage.
 
-<figure align="center">
+<p align="center">
   <img src="images/electoral_cycle.jpg" alt="The Electoral Cycle"/>
-  <figcaption>Source: https://aceproject.org/electoral-advice/electoral-assistance/electoral-cycle.</figcaption>
-</figure>
+</p>
 
 The [International Foundation for Electoral Systems](https://www.ifes.org/)
 (IFES) works with civil society, public institutions, and the private sector to
