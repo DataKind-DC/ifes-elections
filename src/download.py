@@ -1,6 +1,8 @@
 """Utilities to download raw data"""
 import dotenv
+import json
 import os
+import pathlib
 import requests
 
 
@@ -24,4 +26,16 @@ def elections():
     # Get json from the API.
     headers = {"Authorization": f"Token {key}"}
     return requests.get(url, headers=headers).json()
-    
+
+
+if __name__ == "__main__":
+
+    # Path to the raw data.
+    path = pathlib.Path(__file__, "..", "..", "data", "raw").resolve()
+
+    # Get the elections data.
+    data = elections()
+
+    # Write the json to the raw data directory.
+    with open(path / "elections.json", "w+") as f:
+        json.dump(data, f)
