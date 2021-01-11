@@ -51,7 +51,7 @@ Second, install the project Python package, possibly in a virtual env.
 
 ```
 python3 -m venv env/ifes/
-sourced env/ifes/bin/activate
+source env/ifes/bin/activate
 pip install -e .
 ```
 
