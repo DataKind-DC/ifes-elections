@@ -5,8 +5,8 @@
 
 Elections are essential for everyday people to influence the decisions that
 affect their lives. For elections to succeed, election boards, monitors, and
-other stakeholders need resources to support effective and inclusive practices.
-They also need to identify and address election vulnerabilities.
+other stakeholders need to support effective and inclusive practices. They also
+need to identify and address election vulnerabilities.
 
 Timing is important to both of these efforts. Although many of us are familiar
 with the campaigning and voting of elections, many critical stages in the
@@ -28,7 +28,7 @@ work will help stakeholders consider:
 - When are elections most at risk, and when is the time to act?
 
 The result will provide insights about the timing of electoral cycles around the
-world, and it will use visuals to make those insights available to IFES staff,
+world. It will use visuals to make those insights available to IFES staff,
 election officials, donors, academics, and the public at
 [electionguide.org](https://www.electionguide.org/).
 
@@ -64,8 +64,8 @@ an interactive user interface, possibly hosted on
 ## Data
 
 Data will come from [electionguide.org](https://www.electionguide.org/), the
-IFES election data clearinghouse. Stay tuned for details on the API and
-specific sources and fields of interest.
+IFES election data clearinghouse. Stay tuned for details on the API and specific
+sources and fields of interest.
 
 
 ## Phases
@@ -102,10 +102,10 @@ aspect of the data, or to experiment with a new visualization. These documents
 can be quick and informal. The goal is to spark useful discussions.
 
 **Package good ideas.** Some exploratory work will produce code that others will
-want to use. Think critically about the design, add the code to the codebase,
-and document new functionality. This work is more formal, using unit tests,
+want to use. Think critically about the design, add to the codebase, and
+document new functionality. This work is more formal, using unit tests,
 documentation, coding conventions, and more centralized design to promote
-maintainability and easy widespread use.
+maintainability and easy use.
 
 **Go to production.** Work on the public facing application.
 
@@ -113,7 +113,7 @@ maintainability and easy widespread use.
 ## Contribute
 
 We welcome your help! Whether you like data wrangling, exploratory analysis,
-documentation, visual design, or package development, your ideas and effort are
+documentation, visual design, or software development, your ideas and effort are
 valuable. To get started:
 
 1. Connect with us on the #elections channel of the DKDC Slack.
