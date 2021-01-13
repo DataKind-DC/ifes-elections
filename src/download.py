@@ -22,10 +22,16 @@ def elections():
     dotenv.load_dotenv()
     url = os.getenv("URL")
     key = os.getenv("KEY")
-
-    # Get json from the API.
     headers = {"Authorization": f"Token {key}"}
-    return requests.get(url, headers=headers).json()
+
+    # Get json from the API, page by page. Pages have 100 results each.
+    responses = []
+    while url:
+        response = requests.get(url, headers=headers).json()
+        responses.append(response)
+        url = response["next"]
+
+    return responses
 
 
 if __name__ == "__main__":
