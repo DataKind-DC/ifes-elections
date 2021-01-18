@@ -11,5 +11,11 @@ setuptools.setup(
         "python-dotenv>=0.15.0",
         "requests>=2.25.1",
     ],
+    extras_require={
+        "docs": [
+            "Sphinx>=3.4.3",
+            "sphinx-rtd-theme>=0.5.1",
+        ],
+    }
     zip_safe=False,
 )
