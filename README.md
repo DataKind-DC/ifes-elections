@@ -38,7 +38,7 @@ election officials, donors, academics, and the public at
 See the following resources to learn about the project:
 
 - **GitHub:** https://github.com/DataKind-DC/ifes-elections
-- **Documentation:** Stay tuned.
+- **Documentation:** https://ifes-elections-data-visualization.readthedocs.io/
 - **Application:** Stay tuned.
 
 To install, first clone the repository:
