@@ -54,3 +54,28 @@ def tidy_districts(results):
     # Make a districts dataframe.
     return (pd.DataFrame.from_dict(records, orient="index")
               .rename_axis("election_id"))
+
+
+def tidy_elections(results):
+    """Extract elections information from elections json.
+
+    Args:
+        results (list): Results from elections json.
+
+    Returns:
+        pandas.DataFrame: election information, indexed by election ID.
+    """
+    # Identify the unique election index.
+    index = "election_id"
+
+    # Exclude nested data structures.
+    exclude = [
+        "election_name",
+        "district",
+        "voting_methods",
+        "third_party_verified"
+    ]
+
+    # Return a dataframe of election data.
+    return (pd.DataFrame.from_records(results, index=index, exclude=exclude)
+              .rename_axis(index="election_id"))

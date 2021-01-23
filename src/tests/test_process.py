@@ -17,6 +17,10 @@ def results():
                 "district_ocd_id": "do0",
                 "district_country": "dc0",
             },
+            "election_key": "ek0",
+            "election_year": 2020,
+            "voting_methods": [],
+            "third_party_verified": {},
         },
         {
             "election_id": "1",
@@ -27,8 +31,13 @@ def results():
                 "district_ocd_id": "do1",
                 "district_country": "dc1",
             },
+            "election_key": "ek1",
+            "election_year": 2021,
+            "voting_methods": [],
+            "third_party_verified": {},
         },
     ]
+
 
 def test_extract_results():
     raw = [
@@ -57,4 +66,15 @@ def test_tidy_districts(results):
     index = pd.Index(["0", "1"], name="election_id")
     expected = pd.DataFrame(data, index)
     result = process.tidy_districts(results)
+    pdt.assert_frame_equal(result, expected)
+
+
+def test_tidy_elections(results):
+    data = {
+        "election_key": ["ek0", "ek1"],
+        "election_year": [2020, 2021],
+    }
+    index = pd.Index(["0", "1"], name="election_id")
+    expected = pd.DataFrame(data, index)
+    result = process.tidy_elections(results)
     pdt.assert_frame_equal(result, expected)
