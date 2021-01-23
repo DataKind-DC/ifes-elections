@@ -16,6 +16,9 @@ setuptools.setup(
             "Sphinx>=3.4.3",
             "sphinx-rtd-theme>=0.5.1",
         ],
+        "tests": [
+            "pytest>=6.2.1",
+        ],
     }
     zip_safe=False,
 )
