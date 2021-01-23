@@ -8,6 +8,7 @@ setuptools.setup(
     author="DataKind",
     packages=["src"],
     install_requires=[
+        "pandas>=1.2.0",
         "python-dotenv>=0.15.0",
         "requests>=2.25.1",
     ],
