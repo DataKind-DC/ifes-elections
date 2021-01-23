@@ -79,3 +79,24 @@ def tidy_elections(results):
     # Return a dataframe of election data.
     return (pd.DataFrame.from_records(results, index=index, exclude=exclude)
               .rename_axis(index="election_id"))
+
+
+def tidy_verified(results):
+    """Extract verification information from elections json.
+
+    Args:
+        results (list): Results from elections json.
+
+    Returns:
+        pandas.DataFrame: verification information, indexed by election ID.
+    """
+    # Extract district information.
+    records = dict()
+    for result in results:
+        records[result["election_id"]] = result["third_party_verified"]
+
+    # Make a districts dataframe.
+    columns = {"is_verified": "verified", "date": "verified_date"}
+    return (pd.DataFrame.from_dict(records, orient="index")
+              .rename_axis(index="election_id")
+              .rename(columns=columns))

@@ -20,7 +20,10 @@ def results():
             "election_key": "ek0",
             "election_year": 2020,
             "voting_methods": [],
-            "third_party_verified": {},
+            "third_party_verified": {
+                "is_verified": False,
+                "date": "2020-01-01",
+            },
         },
         {
             "election_id": "1",
@@ -34,7 +37,10 @@ def results():
             "election_key": "ek1",
             "election_year": 2021,
             "voting_methods": [],
-            "third_party_verified": {},
+            "third_party_verified": {
+                "is_verified": True,
+                "date": "2021-01-01",
+            },
         },
     ]
 
@@ -77,4 +83,15 @@ def test_tidy_elections(results):
     index = pd.Index(["0", "1"], name="election_id")
     expected = pd.DataFrame(data, index)
     result = process.tidy_elections(results)
+    pdt.assert_frame_equal(result, expected)
+
+
+def test_tidy_verified(results):
+    data = {
+        "verified": [False, True],
+        "verified_date": ["2020-01-01", "2021-01-01"],
+    }
+    index = pd.Index(["0", "1"], name="election_id")
+    expected = pd.DataFrame(data, index)
+    result = process.tidy_verified(results)
     pdt.assert_frame_equal(result, expected)
