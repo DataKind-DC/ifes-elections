@@ -54,6 +54,13 @@ def test_extract_results():
     assert process.extract_results(raw) == expected
 
 
+def test_process_elections(results):
+    index = pd.Index(["0", "1"], name="election_id")
+    result = process.process_elections(results)
+    assert result.shape == (2, 9)
+    pdt.assert_index_equal(index, result.index)
+
+
 def test_tidy_names(results):
     values = ["Election 0", "Election 1"]
     index = pd.Index(["0", "1"], name="election_id")

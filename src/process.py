@@ -18,6 +18,22 @@ def extract_results(raw):
     return results
 
 
+def process_elections(results):
+    """Process elections data from raw results json.
+
+    Args:
+        results (list): Results from elections json.
+
+    Returns:
+        pandas.DataFrame: election data, indexed by election ID.
+    """
+    e = tidy_elections(results)
+    n = tidy_names(results)
+    d = tidy_districts(results)
+    v = tidy_verified(results)
+    return pd.concat([e, n, d, v], axis=1)
+
+
 def tidy_names(results):
     """Extract names from elections json.
 
