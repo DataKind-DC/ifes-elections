@@ -19,7 +19,20 @@ def results():
             },
             "election_key": "ek0",
             "election_year": 2020,
-            "voting_methods": [],
+            "voting_methods": [
+                {
+                    "instructions": {
+                      "voting-id": {
+                        "en_US": "vmi00",
+                      },
+                    },
+                    "excuse-required":  "vmer00",
+                    "start": "vms00",
+                    "end": "vme00",
+                    "primary": "vmp00",
+                    "type": "vmt00",
+                },
+            ],
             "third_party_verified": {
                 "is_verified": False,
                 "date": "2020-01-01",
@@ -36,7 +49,32 @@ def results():
             },
             "election_key": "ek1",
             "election_year": 2021,
-            "voting_methods": [],
+            "voting_methods": [
+                {
+                    "instructions": {
+                      "voting-id": {
+                        "en_US": "vmi10",
+                      },
+                    },
+                    "excuse-required":  "vmer10",
+                    "start": "vms10",
+                    "end": "vme10",
+                    "primary": "vmp10",
+                    "type": "vmt10",
+                },
+                {
+                    "instructions": {
+                      "voting-id": {
+                        "en_US": "vmi11",
+                      },
+                    },
+                    "excuse-required":  "vmer11",
+                    "start": "vms11",
+                    "end": "vme11",
+                    "primary": "vmp11",
+                    "type": "vmt11",
+                },
+            ],
             "third_party_verified": {
                 "is_verified": True,
                 "date": "2021-01-01",
@@ -102,3 +140,44 @@ def test_tidy_verified(results):
     expected = pd.DataFrame(data, index)
     result = process.tidy_verified(results)
     pdt.assert_frame_equal(result, expected)
+
+
+def test_tidy_voting_methods(results):
+    data = {
+        "method_excuse_required": ["vmer00", "vmer10", "vmer11"],
+        "method_start": ["vms00", "vms10", "vms11"],
+        "method_end": ["vme00", "vme10", "vme11"],
+        "method_primary": ["vmp00", "vmp10", "vmp11"],
+        "method_type": ["vmt00", "vmt10", "vmt11"],
+        "method_instructions": ["vmi00", "vmi10", "vmi11"],
+    }
+    tuples = [("0", 0), ("1", 0), ("1", 1)]
+    names = ["election_id", "method_id"]
+    index = pd.MultiIndex.from_tuples(tuples, names=names)
+    expected = pd.DataFrame(data, index)
+    result = process.tidy_voting_methods(results)
+    pdt.assert_frame_equal(result, expected)
+
+
+def test_flatten_voting_method():
+    method = {
+        "instructions": {
+          "voting-id": {
+            "en_US": "English instructions.",
+          },
+        },
+        "excuse-required":  None,
+        "start": None,
+        "end": None,
+        "primary": None,
+        "type": None,
+    }
+    expected = {
+        "instructions": "English instructions.",
+        "excuse-required":  None,
+        "start": None,
+        "end": None,
+        "primary": None,
+        "type": None,
+    }
+    assert process.flatten_voting_method(method) == expected

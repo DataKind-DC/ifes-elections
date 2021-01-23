@@ -116,3 +116,60 @@ def tidy_verified(results):
     return (pd.DataFrame.from_dict(records, orient="index")
               .rename_axis(index="election_id")
               .rename(columns=columns))
+
+
+def tidy_voting_methods(results):
+    """Extract voting methods information from elections json.
+
+    Args:
+        results (list): Results from elections json.
+
+    Returns:
+        pandas.DataFrame: voting methods, indexed by election ID and method.
+    """
+    # Extract voting methods information.
+    records = dict()
+    for result in results:
+        if result["voting_methods"]:
+            for i, method in enumerate(result["voting_methods"]):
+                flat_method = flatten_voting_method(method)
+                records[(result["election_id"], i)] = flat_method
+
+    # Make a voting methods dataframe.
+    return (pd.DataFrame.from_dict(records, orient="index")
+              .rename_axis(["election_id", "method_id"])
+              .rename(columns=lambda x: f"method_{x}".replace("-", "_")))
+
+
+def flatten_voting_method(method):
+    """Flatten a voting method data structure.
+
+    The incoming ``method`` data structure is as follows. At the time of
+    writing, all elections have an identical structure. In practice. the None
+    values could be different scalars. ::
+
+      {
+        "instructions": {
+          "voting-id": {
+            "en_US": None,
+          },
+        },
+        "excuse-required":  None,
+        "start": None,
+        "end": None,
+        "primary": None,
+        "type": None,
+      }
+
+    This function flattens the US English voting ID instructions to become a top
+    level item like all of the others.
+
+    Args:
+        method (dict): A nested voting method data structure.
+
+    Returns:
+        dict: A flat voting method data structure.
+    """
+    flat_method = {k: v for k, v in method.items() if k != "instructions"}
+    flat_method["instructions"] = method["instructions"]["voting-id"]["en_US"]
+    return flat_method
