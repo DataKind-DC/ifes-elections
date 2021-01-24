@@ -34,6 +34,18 @@ def process_elections(results):
     return pd.concat([e, n, d, v], axis=1)
 
 
+def process_voting_methods(results):
+    """Process voting methods data from raw results json.
+
+    Args:
+        results (list): Resuts from elections json.
+
+    Returns:
+        pandas.DataFrame: voting methods, indexed by election and method ID.
+    """
+    return tidy_voting_methods(results)
+
+
 def tidy_names(results):
     """Extract names from elections json.
 

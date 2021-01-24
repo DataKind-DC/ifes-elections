@@ -99,6 +99,15 @@ def test_process_elections(results):
     pdt.assert_index_equal(index, result.index)
 
 
+def test_process_voting_methods(results):
+    tuples = [("0", 0), ("1", 0), ("1", 1)]
+    names = ["election_id", "method_id"]
+    index = pd.MultiIndex.from_tuples(tuples, names=names)
+    result = process.process_voting_methods(results)
+    assert result.shape == (3, 6)
+    pdt.assert_index_equal(index, result.index)
+
+
 def test_tidy_names(results):
     values = ["Election 0", "Election 1"]
     index = pd.Index(["0", "1"], name="election_id")
