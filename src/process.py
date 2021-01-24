@@ -1,6 +1,8 @@
 """Utilities for processing raw json exports.
 """
+import json
 import pandas as pd
+from src import utils
 
 
 def extract_results(raw):
@@ -185,3 +187,28 @@ def flatten_voting_method(method):
     flat_method = {k: v for k, v in method.items() if k != "instructions"}
     flat_method["instructions"] = method["instructions"]["voting-id"]["en_US"]
     return flat_method
+
+
+if __name__ == "__main__":
+
+    # Paths to inputs and outputs.
+    paths = {
+        "raw": utils.PATHS["raw"] / "elections.json",
+        "elections": utils.PATHS["processed"] / "elections.csv",
+        "methods": utils.PATHS["processed"] / "voting_methods.csv",
+    }
+
+    # Read the raw JSON.
+    with open(paths["raw"]) as f:
+        raw = json.load(f)
+
+    # Get just the election cases from the json.
+    results = extract_results(raw)
+
+    # Process election results into tables.
+    elections = process_elections(results)
+    methods = process_voting_methods(results)
+
+    # Write the results.
+    elections.to_csv(paths["elections"])
+    methods.to_csv(paths["methods"])
