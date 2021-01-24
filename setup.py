@@ -8,6 +8,7 @@ setuptools.setup(
     author="DataKind",
     packages=["src"],
     install_requires=[
+        "pandas>=1.2.0",
         "python-dotenv>=0.15.0",
         "requests>=2.25.1",
     ],
@@ -15,6 +16,9 @@ setuptools.setup(
         "docs": [
             "Sphinx>=3.4.3",
             "sphinx-rtd-theme>=0.5.1",
+        ],
+        "tests": [
+            "pytest>=6.2.1",
         ],
     }
     zip_safe=False,

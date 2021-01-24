@@ -58,10 +58,10 @@ pip install -e .
 Third, put a ``.env`` file in the root directory. This file contains credentials
 for activating the Election Guide API. Ask a data ambassador for access.
 
-Finally, download the raw data to `data/raw/` using `make`:
+Finally, download and process the raw data using `make`:
 
 ```
-make raw
+make
 ```
 
 
