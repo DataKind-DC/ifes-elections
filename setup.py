@@ -20,6 +20,6 @@ setuptools.setup(
         "tests": [
             "pytest>=6.2.1",
         ],
-    }
+    },
     zip_safe=False,
 )
